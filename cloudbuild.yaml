@@ -1,0 +1,8 @@
+steps:
+  # Step 1: Checkout the source code
+  - name: 'gcr.io/cloud-builders/git'
+    args: [ 'clone', '.', 'subdirectory']
+
+  # Step 2: Build the Jib image
+  - name: 'gcr.io/cloud-builders/gradle'
+    args: [ 'clean', 'build', 'jib' ]
