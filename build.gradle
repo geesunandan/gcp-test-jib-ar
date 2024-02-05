@@ -9,8 +9,8 @@ group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
 java {
-    sourceCompatibility = '17'
-    targetCompatibility = '17'
+    sourceCompatibility = '11'
+    targetCompatibility = '11'
 }
 
 configurations {
@@ -37,7 +37,7 @@ tasks.named('test') {
 
     jib {
         from {
-            image = 'mcr.microsoft.com/openjdk/jdk:17-ubuntu@sha256:1fea5a39196fbf759de83cdd93317f8d317f61d162ae331a18913f196bf832eb'
+            image = 'openjdk:11-jre'
         }
         to {
             image = 'us-central1-docker.pkg.dev/jumpmind-sandbox/test-jib-ar/my-app'
